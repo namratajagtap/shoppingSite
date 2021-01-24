@@ -1,19 +1,34 @@
+import bcrypt from 'bcryptjs';
 const data = {
+    users: [
+        {
+            name: 'Namrata',
+            email: 'admin@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name: 'prajakta',
+            email: 'user@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+        },
+    ],
     products: [
         {
-            _id: '1',
-            name: 'regular use formal',
+
+            name: 'regular use formal112',
             category: 'shirts',
             image: '/images/p1.jpg',
             countInStock: 10,
-            price: 500,
+            price: 700,
             brand: 'femina',
             rating: 4.5,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         },
         {
-            _id: '2',
+
             name: 'Cream color handbag',
             category: 'shirts',
             image: '/images/p1.jpg',
@@ -22,11 +37,11 @@ const data = {
             brand: 'nike',
             rating: 4.0,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         },
         {
-            _id: '3',
-            name: 'party wear long gown',
+
+            name: 'party wear long gown1',
             category: 'shirts',
             image: '/images/p1.jpg',
             countInStock: 12,
@@ -34,11 +49,11 @@ const data = {
             brand: 'femina',
             rating: 4.5,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         },
         {
-            _id: '4',
-            name: 'party wear long gown',
+
+            name: 'party wear long gown2',
             category: 'shirts',
             image: '/images/p1.jpg',
             countInStock: 5,
@@ -46,11 +61,11 @@ const data = {
             brand: 'femina',
             rating: 4.5,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         },
         {
-            _id: '5',
-            name: 'party wear long gown',
+
+            name: 'party wear long gown3',
             category: 'shirts',
             image: '/images/p1.jpg',
             countInStock: 15,
@@ -58,11 +73,11 @@ const data = {
             brand: 'femina',
             rating: 4.5,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         },
         {
-            _id: '6',
-            name: 'party wear long gown',
+
+            name: 'party wear long gown4',
             category: 'shirts',
             image: '/images/p1.jpg',
             countInStock: 20,
@@ -70,7 +85,7 @@ const data = {
             brand: 'femina',
             rating: 4.5,
             numReviews: 10,
-            descrption: 'high quality product',
+            description: 'high quality product',
         }
     ]
 }
