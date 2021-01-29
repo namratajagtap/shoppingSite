@@ -4,6 +4,7 @@ import data from '../data.js';
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
 /* import { generateToken } from '../utils.js'; */
+/* import { generateToken } from '../utils.js'; */
 import { generateToken, isAuth } from '../utils.js';
 const userRouter = express.Router();
 
