@@ -6,7 +6,7 @@ html{
 body{
   margin :0;
   height:100vh; /* full height*/
-  font-size: 1.6 rem;
+  font-size: 13px;
   font-family: Arial, Helvetica, Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,8 +32,9 @@ body{
 header{
 
   grid-area:header; /* connecting this to grid container grid-template-areas: header;*/
-  background-color: #a33962;
-
+ /*  background-color: #a33962; */
+ background-image: linear-gradient(45deg, rgb(3, 3, 3), rgb(47, 51, 53));
+font-size: 15px;
 }
 
 main{
@@ -44,7 +45,7 @@ main{
 
 footer{
  grid-area: footer;/* connecting this to grid container grid-template-areas: footer;*/
- background-color: #a33962; 
+ background-color: #0f0f0f; 
  color: #f5eef0;
 }
 
@@ -90,7 +91,9 @@ background-color:#f0c040;
 button.block{
   width:100%;
 }
-
+button.small {
+  font-size: 1.2rem;
+}
 input:hover,
 select:hover,
 textarea:hover,
@@ -169,6 +172,8 @@ img.medium{
 }
 .card-body{
   padding: 1rem;
+  color: #a02020 ;
+ 
 }
 
 /* all direct child of card-body > **/
@@ -229,7 +234,10 @@ img.medium{
   color: #a02020;
   background-color:#e0e0ff;
  }
-
+ .alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
  /* Form */
 .form {
   max-width: 60rem;
@@ -265,4 +273,22 @@ img.medium{
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
 }

@@ -32,6 +32,18 @@ export default function SigninScreen(props) {
         <div>
             <form className="form" onSubmit={submitHandler}>
                 <div>
+                    <div>
+                        <label />
+                        <div>
+                            New customer?{' '}
+                            {/* <Link to={`/signin?redirect=${redirect}`}>
+                                Create your account
+            </Link> */}
+                            <Link to='/register'>
+                                Create your account
+            </Link>
+                        </div>
+                    </div>
                     <h1>Sign In</h1>
                 </div>
                 {loading && <LoadingBox></LoadingBox>}
@@ -62,15 +74,7 @@ export default function SigninScreen(props) {
                         Sign In
           </button>
                 </div>
-                <div>
-                    <label />
-                    <div>
-                        New customer?{' '}
-                        <Link to={`/signin?redirect=${redirect}`}>
-                            Create your account
-            </Link>
-                    </div>
-                </div>
+
             </form>
         </div>
     );

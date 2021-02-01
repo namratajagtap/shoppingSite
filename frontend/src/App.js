@@ -16,7 +16,8 @@ import { signout } from "./actions/userActions";
 import AdminRoute from './components/AdminRoute';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
-
+import OrderListScreen from './screens/OrderListScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 function App() {
 
   const cart = useSelector(state => state.cart);
@@ -31,10 +32,13 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
+
           <div>
-            <Link className="brand" to="/">Shopping site</Link>
+            <Link className="brand" to="/">Sakhi<img style={{ height: "40px", width: "40px" }} src="./images/logo.jpg" ></img></Link>
+
           </div>
-          <div>
+          <div><input className="form-control" type="text" placeholder="Search" aria-label="Search" style={{ height: "10px", width: "400px" }} /></div>
+          <div >
             <Link to="/cart">Cart
             {
                 cartItems.length > 0 && (
@@ -50,6 +54,9 @@ function App() {
                 <ul className="dropdown-content">
                   <li>
                     <Link to="/profile">User Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderhistory">Order History</Link>
                   </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
@@ -98,7 +105,7 @@ function App() {
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
-
+          <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
@@ -107,12 +114,16 @@ function App() {
             path="/productlist"
             component={ProductListScreen}
           ></AdminRoute>
+          <AdminRoute
+            path="/orderlist"
+            component={OrderListScreen}
+          ></AdminRoute>
           <Route path="/" component={HomeScreen} exact ></Route>
 
 
         </main>
         <footer className="row center">
-          Shopping site
+          Sakhi
         </footer>
       </div>
     </BrowserRouter>
